@@ -46,7 +46,7 @@ while loop == 1:
         print("Positive numbers in the list: ", pos_count)
         print("Negative numbers in the list: ", neg_count)
     elif n==4:
-        break
+        loop=0
     else:
         print("Wrong Choice")
 #$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -57,6 +57,7 @@ for i in range(0, 10):
     elem = int(input())
     lst_3.append(elem)
 print("Final List is : ",lst_3)
+loop=1
 while loop == 1:
     print("\n1.)To Sort using Sorted Function\n2.)To Sort using Sort Function\n3.)To Display Length of List\n4.)To Exit")
     n=int(input("Enter Your Choice: "))
@@ -70,6 +71,6 @@ while loop == 1:
         lent=len(lst_3)
         print("Lenght of List is: ",lent)
     elif n==4:
-        break
+        loop=0
     else:
         print("WRONG INPUT")
