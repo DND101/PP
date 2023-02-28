@@ -1,0 +1,75 @@
+#Exec-01
+list_1=[12,45,34,24]
+a=list_1[0:3]
+b=list_1[len(list_1) - 1]
+c=list_1[-2:]
+d=list_1[:-2]
+e=list_1[::-1]
+print("first three elements from List:",a,"\nLast element from List using the len function: ",b,"\nLast two elements from List: ",c,"\nFirst two elements using backward indices: ",d,"\nReverse the elements in the string:",e)
+
+
+
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+#Exec-02
+lst = []
+for i in range(0, 20):
+    print("Enter Element Number ",i," :")
+    ele = int(input())
+    lst.append(ele)
+print("Final List is : ",lst)
+loop=1
+while loop == 1:
+    print("\n1.)To Count Similar Items\n2.)To Count Even & ODD in List\n3.)To Count Positive & Negative from List\n4.)To Exit")
+    n=int(input("Enter Your Choice: "))
+    if n==1:
+        key=int(input("Enter Element To be Serached: "))
+        res = lst.count(key)
+        print("Result",res)
+    elif n==2:
+        even_count, odd_count = 0, 0
+        for num in lst:
+            if num % 2 == 0:
+                even_count += 1
+            else:
+                odd_count += 1
+        print("Even numbers in the list: ", even_count)
+        print("Odd numbers in the list: ", odd_count)
+    elif n==3:
+        pos_count, neg_count = 0, 0
+        for num in lst:
+            if num >= 0:
+                pos_count += 1
+ 
+            else:
+                neg_count += 1
+ 
+        print("Positive numbers in the list: ", pos_count)
+        print("Negative numbers in the list: ", neg_count)
+    elif n==4:
+        break
+    else:
+        print("Wrong Choice")
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+#Exec-03
+lst_3= []
+for i in range(0, 10):
+    print("Enter Element Number ",i," :")
+    elem = int(input())
+    lst_3.append(elem)
+print("Final List is : ",lst_3)
+while loop == 1:
+    print("\n1.)To Sort using Sorted Function\n2.)To Sort using Sort Function\n3.)To Display Length of List\n4.)To Exit")
+    n=int(input("Enter Your Choice: "))
+    if n==1:
+        srtd=sorted(lst_3)
+        print("New List is: ",srtd)
+    elif n==2:
+        srt=lst_3.sort(reverse=True)
+        print("New List is: ",srt)
+    elif n==3:
+        lent=len(lst_3)
+        print("Lenght of List is: ",lent)
+    elif n==4:
+        break
+    else:
+        print("WRONG INPUT")
