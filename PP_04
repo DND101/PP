@@ -74,3 +74,23 @@ while loop == 1:
         loop=0
     else:
         print("WRONG INPUT")
+
+
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+#Exec-04
+lst_4= []
+lst4n=int(input("Enter Number of elements of List_1:"))
+for i in range(0, lst4n):
+    print("Enter Element Number ",i," :")
+    ele4 = int(input())
+    lst_4.append(ele4)
+print("Final List is : ",lst_4)
+lst_5= []
+lst_5n=int(input("Enter Number of elements of List_2:"))
+for i in range(0, lst_5n):
+    print("Enter Element Number ",i," :")
+    ele5 = int(input())
+    lst_5.append(ele5)
+print("Final List is : ",lst_5)
+lst_6=lst_5+lst_4
+print("New List is: ",Lst_6)
