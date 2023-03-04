@@ -1,0 +1,66 @@
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+#EXEC-01
+my_dict={"ABC": "1st-Year","DEF": "2nd-Year","GHI": "3rd-Year","JKL":"4th-Year","MNO":"5th-Year"}
+lp_1 = 1
+while lp_1 == 1:
+    print("\n1.)To Add Elemets in Dictionary\n2.)To Delete Elemets in Dictionary\n3.)Display Dictionary\n4.)Exit\n")
+    n_1=int(input("Enter Your Choice: "))
+    if n_1 == 1:
+        num_entry=int(input("Enter Total Number Of Entries: "))
+        for i in range(num_entry):
+            nam = input("Enter Student's Name: ")
+            year = input("Enter Student's Year: ")
+            my_dict[nam] = year
+    elif n_1 == 2:
+        del_key=input("Enter Name To Be Deleted: ")
+        del my_dict[del_key]
+        print("\nEntry Deleted Successfully\n")
+    elif n_1 == 3:
+        print(my_dict)
+    elif n_1 == 4:
+        lp_1=0
+    else:
+        print("\nWrong Input\n")
+        
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+#EXEC-02
+cmbd={}
+ky_lst = ["QWE", "RTY", "UIO"]
+val_lst = [1, 2, 3]
+print("Pre Acquired Key List: ",ky_lst)
+print("Pre Acquired Value List: ",val_lst)
+lp_2 = 1
+while lp_2 == 1:
+    print("\n1.)To Add Elemets in Key & Value List\n2.)Display Both List \n3.)To Convert List to Dictionary\n4.)Display Dictionary\n5.)Exit\n")
+    n_1=int(input("Enter Your Choice: "))
+    if n_1 == 1:
+        nl_1 = int(input("Enter number of elements to be Added in list : "))
+        for i in range(0, nl_1):
+            ele_k = input("Enter Key: ")
+            ky_lst.append(ele_k)
+            ele_l = int(input("Enter Value: "))
+            val_lst.append(ele_l)
+    elif n_1 == 2:
+        print(ky_lst,"\n",val_lst)
+    elif n_1 == 3:
+        for key in ky_lst:
+            for value in val_lst:
+                cmbd[key] = value
+                val_lst.remove(value)
+                break
+        print("Succesfully Coneverted To DICTIONARY")
+    elif n_1 == 4:
+        print(cmbd)
+    elif n_1 ==5:
+        lp_2=0
+    else:
+        print("\nWrong Input\n")
+
+
+
+#$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+#EXEC-03
+my_dict2= {"name": "ABC", "panel": "B", "rollno":34, "marks":[65,87,67,94]}
+print("UnSorted Dict: ",my_dict2)
+dict(sorted(my_dict2.items()))
+print("Sorted Dict: ",my_dict2)
