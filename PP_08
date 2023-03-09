@@ -1,0 +1,27 @@
+import numpy as np
+arr_1=np.array([(8,9,10),(11,12,13)])
+arr_2= np.array([(1,2,3),(4,5,6)])
+lp_1=1
+print("ARRAY-1: ",arr_1)
+print("ARRAY-2: ",arr_2)
+while lp_1 == 1:
+    print("\n1.)To Print type of Array\n2.)To Print Axes of Array \n3.)To Print Shape of Array\n4.Type of Element in Array\n5.)Exit)")
+    n=int(input("Enter Your Choice: "))
+    if n==1:
+        print("Data Type of ARRAY-1: ",type(arr_1))
+        print("Data Type of ARRAY-2: ",type(arr_2))
+    elif n==2:
+        print("AXIS-0 , Array_1: ",np.sum(arr_1,axis=0))
+        print("AXIS-1 , Array_1: ",np.sum(arr_1,axis=1))
+        print("AXIS-0 , Array_2: ",np.sum(arr_2,axis=0))
+        print("AXIS-1 , Array_2: ",np.sum(arr_2,axis=1))
+    elif n==3:
+        print("Shape of Array_1: ",arr_1.shape)
+        print("Shape of Array_2: ",arr_2.shape)
+    elif n==4:
+        print("Data Type of Element of ARRAY-1: ",arr_1.dtype)
+        print("Data Type of Element of ARRAY-2: ",arr_2.dtype)
+    elif n==5:
+        lp_1=0
+    else:
+        print("WRONG INPUT!!\n")
