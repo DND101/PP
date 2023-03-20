@@ -1,0 +1,41 @@
+class stud:
+    def accp(slf):
+        slf.n=int(input("Enter Number of Students :"))
+        for i in range(0,slf.n):
+            slf.nme=input("Enter Your Name :")
+            slf.rno=int(input("Enter Your Roll Number: "))
+            slf.math=int(input("Enter Marks of Maths Subject: "))
+            slf.sci=int(input("Enter Marks of Science Number: "))
+            slf.pp=int(input("Enter Marks of Python Project: "))
+
+    def disp(slf):
+        print("\n Entered Data Is As Follows\n")
+        print("Student Name :",slf.nme,"\nRoll Number :",slf.rno,"\nMaths Marks :",slf.math,"\nScience Marks :",slf.sci,"\nPP Marks :",slf.pp)
+
+    def rslt(slf):
+        if slf.math < 35:
+            print("Student is Failed in Maths")
+        elif self.sci < 35:
+            print("Student is Failed in Science")
+        elif slf.pp < 35:
+            print("Student is Failed in Python Programming")
+        elif slf.maths > 35 & slf.science > 35 & slf.pp > 35:
+            print("Student is Passed in All Subjects")
+
+   
+s = stud()
+loop=1
+while loop==1:
+    a = int(input("1.)Add Student Record\n2.)Dislayn Records \n3.)Show Result\n4.)To Exit\n\nEnter Your Choice :"))
+    if a == 1:
+        s.accp()
+       
+    elif a == 2:
+        s.disp()
+       
+    elif a==3:
+        s.rslt()
+    elif a==4:
+        loop=0
+    else:
+        print("Enter Correct Value!!!")
